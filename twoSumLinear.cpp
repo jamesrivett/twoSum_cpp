@@ -44,7 +44,17 @@ vector<int> twoSumLinear(vector<int> nums, int target) {
 
 int main(int c, char *v[]) {
     vector<int> input = vector<int>({0,1,2,7,11,15});
-    vector<int> answer = twoSumLinear(input, 9);
+    int target = 9;
 
-    cout << to_string(answer[0]) + ", " + to_string(answer[1]) + "\n";
+    vector<int> answer = twoSumLinear(input, target);
+	
+	cout << "input vector: ";
+    for (int i = 0; i < input.size(); i++) {
+        if (i != 0)  { cout << ", "; }
+        cout << input[i];
+    }
+    cout << "\ntarget: " + to_string(target);
+    cout << "\n\n\n";
+	
+    cout << "result: " + to_string(answer[0]) + ", " + to_string(answer[1]) + "\n";
 }

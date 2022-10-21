@@ -35,7 +35,18 @@ vector<int> twoSum(vector<int> nums, int target) {
 
 int main(int c, char *v[]) {
     vector<int> input = vector<int>({2,3,4});
-    vector<int> answer = twoSum(input, 6);
+    int target = 6;
 
-    cout << to_string(answer[0]) + ", " + to_string(answer[1]) + "\n";
+    vector<int> answer = twoSum(input, target);
+
+    cout << "input vector: ";
+    for (int i = 0; i < input.size(); i++) {
+        if (i != 0)  { cout << ", "; }
+        cout << input[i];
+    }
+    cout << "\ntarget: " + to_string(target);
+    cout << "\n\n\n";
+	
+    
+    cout << "result: " + to_string(answer[0]) + ", " + to_string(answer[1]) + "\n";
 }
